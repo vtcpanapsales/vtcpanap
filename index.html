@@ -24,29 +24,26 @@ body {
 .navbar {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 15px 40px;
     background: white;
+    position: sticky;
+    top: 0;
 }
 
 .logo {
     font-weight: bold;
-    color: #d32f2f;
+    color: red;
     font-size: 22px;
 }
 
 .nav-links a {
     margin: 0 15px;
     text-decoration: none;
-    color: #333;
+    color: black;
     font-weight: bold;
 }
 
-.nav-links a:hover {
-    color: red;
-}
-
-/* Hero Section */
+/* Hero */
 .hero {
     display: flex;
     align-items: center;
@@ -56,27 +53,15 @@ body {
     color: white;
 }
 
-.hero-text {
-    max-width: 50%;
-}
-
 .hero-text h1 {
     font-size: 50px;
-    margin-bottom: 20px;
 }
 
-.hero-text p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-/* Buttons */
 .btn {
     padding: 12px 20px;
+    margin: 10px;
     border: none;
     cursor: pointer;
-    margin-right: 10px;
-    font-weight: bold;
 }
 
 .btn-red {
@@ -85,70 +70,106 @@ body {
 }
 
 .btn-outline {
-    background: transparent;
     border: 2px solid white;
+    background: transparent;
     color: white;
 }
 
-/* Image */
-.hero img {
-    width: 400px;
-    border-radius: 15px;
+/* Products */
+.section {
+    padding: 50px;
+    text-align: center;
 }
 
-/* Responsive */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+/* Contact */
+.contact {
+    background: #f5f5f5;
+    padding: 40px;
+    text-align: center;
+}
+
+/* WhatsApp */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: green;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+/* Mobile */
 @media (max-width: 768px) {
     .hero {
         flex-direction: column;
         text-align: center;
     }
-
-    .hero-text {
-        max-width: 100%;
-    }
-
-    .hero img {
-        width: 100%;
-        margin-top: 20px;
-    }
 }
 </style>
-
 </head>
 
 <body>
 
 <div class="topbar">
-Serving industries across Maharashtra since 1988
+Serving industries since 1988
 </div>
 
 <div class="navbar">
 <div class="logo">VTC</div>
-
 <div class="nav-links">
 <a href="#">Home</a>
-<a href="#about">About</a>
 <a href="#products">Products</a>
 <a href="#contact">Contact</a>
 </div>
 </div>
 
 <div class="hero">
-<div class="hero-text">
+<div>
 <h1>Reliable Supply.<br>Responsible Trade.</h1>
-
-<p>
-Venkatesh Trading Corporation delivers dependable industrial products
-with trusted service and consistent performance.
-</p>
+<p>Industrial products supplier across Maharashtra.</p>
 
 <button class="btn btn-red">View Products</button>
 <button class="btn btn-outline">Get Quote</button>
 </div>
 
-<img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789" alt="pipes">
-
+<img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789" width="400">
 </div>
+
+<div class="section" id="products">
+<h2>Our Products</h2>
+
+<div class="products">
+<div class="card">Valves</div>
+<div class="card">Pipes</div>
+<div class="card">Fittings</div>
+<div class="card">Gaskets</div>
+<div class="card">Gauges</div>
+<div class="card">Industrial Tools</div>
+</div>
+</div>
+
+<div class="contact" id="contact">
+<h2>Contact Us</h2>
+<p>📞 9822557078</p>
+<p>📧 vtc.panap@gmail.com</p>
+</div>
+
+<a class="whatsapp" href="https://wa.me/919822557078">💬</a>
 
 </body>
 </html>
